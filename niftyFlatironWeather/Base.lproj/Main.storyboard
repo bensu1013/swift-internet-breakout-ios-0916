@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gFM-84-4Ah">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Current-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="niftyFlatironWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +19,161 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ai-qA-Twy">
+                                <frame key="frameInset" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="Eeu-Bz-Dfb"/>
+                                    <tabBarItem systemItem="more" id="eAT-R1-orv"/>
+                                </items>
+                            </tabBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMc-Ua-L6q">
+                                <frame key="frameInset" minX="52" minY="140" width="130" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QV1-5s-O7p">
+                                <frame key="frameInset" minX="64" minY="222" width="118" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEs-Ft-VIk">
+                                <frame key="frameInset" minX="64" minY="39" width="195" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Current" id="0FG-pI-MH3" userLabel="Current Weather"/>
+                    <connections>
+                        <outlet property="humidityLabel" destination="QV1-5s-O7p" id="b3R-et-syh"/>
+                        <outlet property="summaryLabel" destination="VEs-Ft-VIk" id="LN1-Sj-bcw"/>
+                        <outlet property="temperatureLabel" destination="BMc-Ua-L6q" id="oQU-zE-0UZ"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-50.399999999999999" y="-291.00449775112446"/>
+        </scene>
+        <!--Daily-->
+        <scene sceneID="Fgj-TB-qsu">
+            <objects>
+                <viewController id="9rX-1F-9g2" customClass="DailyViewController" customModule="niftyFlatironWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uWS-OM-KTC"/>
+                        <viewControllerLayoutGuide type="bottom" id="VdC-SQ-SLB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RcY-6Y-JWY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K4y-Ni-9Zh">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xvp-Li-ExF">
+                                        <color key="backgroundColor" red="1" green="0.52777565626209211" blue="0.51592550690759076" alpha="1" colorSpace="calibratedRGB"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.26814039928978028" green="1" blue="0.3799210071791469" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="xvp-Li-ExF" firstAttribute="leading" secondItem="K4y-Ni-9Zh" secondAttribute="leading" id="AZo-hc-nFN"/>
+                                    <constraint firstItem="xvp-Li-ExF" firstAttribute="height" secondItem="K4y-Ni-9Zh" secondAttribute="height" id="Fuu-en-6Bg"/>
+                                    <constraint firstAttribute="bottom" secondItem="xvp-Li-ExF" secondAttribute="bottom" id="LsB-VZ-y8q"/>
+                                    <constraint firstItem="xvp-Li-ExF" firstAttribute="width" secondItem="K4y-Ni-9Zh" secondAttribute="width" id="NGp-eY-gsx"/>
+                                    <constraint firstItem="xvp-Li-ExF" firstAttribute="top" secondItem="K4y-Ni-9Zh" secondAttribute="top" id="QeG-da-szS"/>
+                                    <constraint firstAttribute="trailing" secondItem="xvp-Li-ExF" secondAttribute="trailing" id="WOc-6f-JVU"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.22312153558430614" green="0.54160631776455737" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="VdC-SQ-SLB" firstAttribute="top" secondItem="K4y-Ni-9Zh" secondAttribute="bottom" id="0AV-Of-VGf"/>
+                            <constraint firstItem="K4y-Ni-9Zh" firstAttribute="top" secondItem="uWS-OM-KTC" secondAttribute="bottom" id="42t-WJ-G1H"/>
+                            <constraint firstItem="K4y-Ni-9Zh" firstAttribute="leading" secondItem="RcY-6Y-JWY" secondAttribute="leadingMargin" id="9gm-Xj-fdb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K4y-Ni-9Zh" secondAttribute="trailing" id="CIH-uW-v7H"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Daily" id="TU4-ge-60F" userLabel="Daily Weather"/>
+                    <connections>
+                        <outlet property="scrollView" destination="K4y-Ni-9Zh" id="uO3-2a-lPF"/>
+                        <outlet property="stackHeightConstraint" destination="Fuu-en-6Bg" id="5h8-S4-gsS"/>
+                        <outlet property="stackView" destination="xvp-Li-ExF" id="hNH-4q-Syi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kDm-Oj-hLd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-50.399999999999999" y="1184.257871064468"/>
+        </scene>
+        <!--Hourly-->
+        <scene sceneID="wm7-Oy-NXc">
+            <objects>
+                <tableViewController id="Wr0-YF-N7q" customClass="HourlyTableViewController" customModule="niftyFlatironWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Okw-22-Up7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="hourlyCell" textLabel="jdN-mC-R8H" detailTextLabel="8WJ-IJ-shr" style="IBUITableViewCellStyleValue1" id="q5L-Ic-z8S">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q5L-Ic-z8S" id="QCN-tU-BBu">
+                                    <frame key="frameInset" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jdN-mC-R8H">
+                                            <frame key="frameInset" minX="15" minY="11" width="34" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8WJ-IJ-shr">
+                                            <frame key="frameInset" minX="316" minY="11" width="44" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Wr0-YF-N7q" id="xAY-d0-wVk"/>
+                            <outlet property="delegate" destination="Wr0-YF-N7q" id="nDA-Fx-n1E"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Hourly" id="Adv-CA-UIj" userLabel="Hourly Weather"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xZW-2S-Usi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-50" y="384"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="bnO-SD-ZBn">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gFM-84-4Ah" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="GnZ-iY-Swn">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="S92-P9-ex9"/>
+                        <segue destination="Wr0-YF-N7q" kind="relationship" relationship="viewControllers" id="BOm-kO-Tik"/>
+                        <segue destination="9rX-1F-9g2" kind="relationship" relationship="viewControllers" id="hRq-o5-jsI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pOb-bM-aCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1233" y="118"/>
         </scene>
     </scenes>
 </document>

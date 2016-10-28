@@ -12,6 +12,12 @@
 		8F07727A1DC2FDEF0061A640 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F0772781DC2FDEF0061A640 /* Main.storyboard */; };
 		8F07727C1DC2FDEF0061A640 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F07727B1DC2FDEF0061A640 /* Assets.xcassets */; };
 		8F07727F1DC2FDEF0061A640 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F07727D1DC2FDEF0061A640 /* LaunchScreen.storyboard */; };
+		B5A5C0551DC39D3E00822FC2 /* WeatherDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A5C0541DC39D3E00822FC2 /* WeatherDataStore.swift */; };
+		B5A5C0571DC3A5FF00822FC2 /* daily.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A5C0561DC3A5FF00822FC2 /* daily.swift */; };
+		B5A5C0591DC3BB6500822FC2 /* WeatherAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A5C0581DC3BB6500822FC2 /* WeatherAPIClient.swift */; };
+		B5A5C05B1DC3BBCD00822FC2 /* secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A5C05A1DC3BBCD00822FC2 /* secret.swift */; };
+		B5A5C05D1DC3C6B900822FC2 /* HourlyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A5C05C1DC3C6B900822FC2 /* HourlyTableViewController.swift */; };
+		B5A5C05F1DC3C78100822FC2 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A5C05E1DC3C78100822FC2 /* DailyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		8F07727B1DC2FDEF0061A640 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F07727E1DC2FDEF0061A640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F0772801DC2FDEF0061A640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5A5C0541DC39D3E00822FC2 /* WeatherDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDataStore.swift; sourceTree = "<group>"; };
+		B5A5C0561DC3A5FF00822FC2 /* daily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = daily.swift; sourceTree = "<group>"; };
+		B5A5C0581DC3BB6500822FC2 /* WeatherAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherAPIClient.swift; sourceTree = "<group>"; };
+		B5A5C05A1DC3BBCD00822FC2 /* secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secret.swift; sourceTree = "<group>"; };
+		B5A5C05C1DC3C6B900822FC2 /* HourlyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourlyTableViewController.swift; sourceTree = "<group>"; };
+		B5A5C05E1DC3C78100822FC2 /* DailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +68,13 @@
 			children = (
 				8F0772741DC2FDEF0061A640 /* AppDelegate.swift */,
 				8F0772761DC2FDEF0061A640 /* ViewController.swift */,
+				B5A5C0541DC39D3E00822FC2 /* WeatherDataStore.swift */,
+				B5A5C0581DC3BB6500822FC2 /* WeatherAPIClient.swift */,
+				B5A5C05A1DC3BBCD00822FC2 /* secret.swift */,
 				8F0772781DC2FDEF0061A640 /* Main.storyboard */,
+				B5A5C05C1DC3C6B900822FC2 /* HourlyTableViewController.swift */,
+				B5A5C05E1DC3C78100822FC2 /* DailyViewController.swift */,
+				B5A5C0561DC3A5FF00822FC2 /* daily.swift */,
 				8F07727B1DC2FDEF0061A640 /* Assets.xcassets */,
 				8F07727D1DC2FDEF0061A640 /* LaunchScreen.storyboard */,
 				8F0772801DC2FDEF0061A640 /* Info.plist */,
@@ -137,8 +155,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5A5C0551DC39D3E00822FC2 /* WeatherDataStore.swift in Sources */,
+				B5A5C0571DC3A5FF00822FC2 /* daily.swift in Sources */,
 				8F0772771DC2FDEF0061A640 /* ViewController.swift in Sources */,
+				B5A5C05D1DC3C6B900822FC2 /* HourlyTableViewController.swift in Sources */,
 				8F0772751DC2FDEF0061A640 /* AppDelegate.swift in Sources */,
+				B5A5C0591DC3BB6500822FC2 /* WeatherAPIClient.swift in Sources */,
+				B5A5C05F1DC3C78100822FC2 /* DailyViewController.swift in Sources */,
+				B5A5C05B1DC3BBCD00822FC2 /* secret.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +326,7 @@
 				8F0772851DC2FDEF0061A640 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
